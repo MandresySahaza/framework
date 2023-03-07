@@ -5,6 +5,8 @@
  */
 package etu1910.framework.servelet;
 
+import etu1910.framework.classe.Mapping;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
@@ -28,6 +30,7 @@ public class FrontServlet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    HashMap<String,Mapping> mappingUrl = new HashMap<String, Mapping>();
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/plain");
